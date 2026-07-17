@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/context/ThemeContext";
 import ShellLayout from "@/components/navigation/ShellLayout";
 import "@/styles/globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -26,14 +27,14 @@ export const metadata: Metadata = {
     "Process Orchestration"
   ],
   authors: [{ name: "Stone Circuit Team" }],
-  metadataBase: new URL("https://stonecircuit.com"),
+  metadataBase: new URL("https://stonecircuit.in"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Stone Circuit | Business Workflow Software",
     description: "Stone Circuit builds reliable software designed to bring order and predictability to complex business operations. Creators of Operant OS.",
-    url: "https://stonecircuit.com",
+    url: "https://stonecircuit.in",
     siteName: "Stone Circuit",
     locale: "en_US",
     type: "website",
@@ -54,14 +55,34 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Stone Circuit",
-    "url": "https://stonecircuit.com",
-    "logo": "https://stonecircuit.com/icon",
+    "url": "https://stonecircuit.in",
+    "logo": "https://stonecircuit.in/icon",
     "description": "Stone Circuit builds reliable software designed to bring order and predictability to complex business operations.",
     "sameAs": [
       "https://github.com/stone-circuit",
       "https://x.com/stone_circuit",
       "https://linkedin.com/company/stone-circuit"
     ]
+  };
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Operant OS",
+    "operatingSystem": "All",
+    "applicationCategory": "BusinessApplication",
+    "description": "An AI-powered Business Operating System designed to simplify accounting, inventory, reporting, and everyday business operations.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "description": "Enterprise pricing available on request"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Stone Circuit",
+      "url": "https://stonecircuit.in"
+    }
   };
 
   return (
@@ -98,11 +119,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
       </head>
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider>
           <ShellLayout>{children}</ShellLayout>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-5K8X8CJYD5" />
       </body>
     </html>
   );

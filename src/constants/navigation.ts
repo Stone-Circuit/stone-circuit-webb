@@ -6,12 +6,6 @@ export const PRODUCTS_MENU: NavItem[] = [
     href: "/products",
     description: "Orchestrate and automate complex enterprise workflows and processes.",
     badge: "v1.0"
-  },
-  {
-    title: "FlowCapture AI",
-    href: "/products",
-    description: "Ingest and translate unstructured data into structured pipeline inputs.",
-    badge: "Coming Soon"
   }
 ];
 
@@ -79,8 +73,7 @@ export const FOOTER_COLUMNS: NavSection[] = [
   {
     title: "Products",
     items: [
-      { title: "Operant OS", href: "/products" },
-      { title: "FlowCapture AI", href: "/products" }
+      { title: "Operant OS", href: "/products" }
     ]
   },
   {

@@ -3,7 +3,7 @@ import { TeamMember, JobOpening } from "@/types/brand";
 export const COMPANY_NAME = "Stone Circuit";
 export const MISSION = "Build intelligent software that brings clarity to modern businesses.";
 export const TAGLINE = "Clarity through Intelligence";
-export const CONTACT_EMAIL = "contact@stonecircuit.com";
+export const CONTACT_EMAIL = "contact@stonecircuit.in";
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {

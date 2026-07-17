@@ -89,9 +89,16 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           
           {/* Copyright notice */}
-          <div className="text-[11px] font-mono text-text-disabled">
-            &copy; {new Date().getFullYear()} Stone Circuit Inc. All rights reserved.
-          </div>
+          {/* Copyright + Version */}
+<div className="flex flex-col text-[11px] font-mono text-text-disabled leading-relaxed">
+  <span>
+    &copy; {new Date().getFullYear()} Stone Circuit. All rights reserved.
+  </span>
+
+  <span className="text-text-muted">
+    Website v1.0.0
+  </span>
+</div>
 
           {/* Controls: Social icons + Theme Toggle */}
           <div className="flex items-center gap-6">
