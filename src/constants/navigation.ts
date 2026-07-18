@@ -103,8 +103,8 @@ export const FOOTER_COLUMNS: NavSection[] = [
   {
     title: "Legal & Trust",
     items: [
-      { title: "Terms of Service", href: "/legal/terms" },
-      { title: "Privacy Policy", href: "/legal/privacy" }
+      { title: "Terms of Service", href: "/terms" },
+      { title: "Privacy Policy", href: "/privacy" }
     ]
   }
 ];

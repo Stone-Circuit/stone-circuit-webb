@@ -9,6 +9,8 @@ import { useScroll } from "@/hooks/use-scroll";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/navigation/ThemeToggle";
 import { NAVBAR_ITEMS } from "@/constants/navigation";
+import Image from "next/image";
+
 
 export function Navbar() {
   const pathname = usePathname();
@@ -45,26 +47,19 @@ export function Navbar() {
         
         {/* Logo sits on the left */}
         <div className="flex items-center gap-10">
-          <Link href="/" className="flex items-center gap-2.5 focus-ring rounded-xl px-2 py-1 select-none">
-            <svg
-              className="w-5.5 h-5.5 text-turquoise-brand"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect x="3" y="3" width="18" height="18" rx="4" />
-              <path d="M7 21V3" />
-              <path d="M17 21V3" />
-              <path d="M3 12h18" />
-              <circle cx="12" cy="12" r="1.5" className="fill-warm-yellow-accent stroke-warm-yellow-accent" />
-            </svg>
-            <span className="font-sans font-bold tracking-tight text-text-primary text-base">
-              STONE <span className="text-turquoise-brand font-semibold">CIRCUIT</span>
-            </span>
-          </Link>
+          <Link href="/" className="flex items-center gap-3">
+  <Image
+    src="logo.png"
+    alt="Stone Circuit"
+    width={40}
+    height={40}
+    priority
+  />
+
+  <span className="font-bold text-xl">
+    Stone Circuit
+  </span>
+</Link>
 
           {/* Desktop minimal nav links */}
           <nav className="hidden md:flex items-center gap-1.5">

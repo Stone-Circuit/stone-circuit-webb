@@ -16,8 +16,8 @@ export function Footer() {
     { title: "About", href: "/about" },
     { title: "Contact", href: "/contact" },
     { title: "Launch Operant OS", href: "https://operant-os.vercel.app" },
-    { title: "Privacy", href: "/legal/privacy" },
-    { title: "Terms", href: "/legal/terms" }
+    { title: "Privacy Policy", href: "/privacy" },
+    { title: "Terms of Service", href: "/terms" }
   ];
 
   const socials = [

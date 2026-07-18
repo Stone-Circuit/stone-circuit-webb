@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/context/ThemeContext";
 import ShellLayout from "@/components/navigation/ShellLayout";
 import "@/styles/globals.css";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 
 export const viewport: Viewport = {
@@ -94,13 +94,15 @@ export default function RootLayout({
     >
       <head>
         {/* Inline script to load saved theme immediately and block page flash */}
-        <script
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
                   var savedTheme = localStorage.getItem('stone-theme');
-                  var activeTheme = 'dark'; // Default
+                  var activeTheme = 'dark';
                   if (savedTheme) {
                     if (savedTheme === 'system') {
                       var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -109,6 +111,7 @@ export default function RootLayout({
                       activeTheme = savedTheme;
                     }
                   }
+                  document.documentElement.classList.remove('light', 'dark');
                   document.documentElement.classList.add(activeTheme);
                 } catch (e) {}
               })()
@@ -116,12 +119,16 @@ export default function RootLayout({
           }}
         />
         {/* JSON-LD Structured Data Schema */}
-        <script
+        <Script
+          id="organization-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <script
+        <Script
+          id="product-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
       </head>
@@ -130,14 +137,19 @@ export default function RootLayout({
           <ShellLayout>{children}</ShellLayout>
         </ThemeProvider>
         <GoogleAnalytics gaId="G-5K8X8CJYD5" />
-        {`
-        <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xo814h9wgh");
-</script>`}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "xo814h9wgh");
+            `
+          }}
+        />
       </body>
     </html>
   );
