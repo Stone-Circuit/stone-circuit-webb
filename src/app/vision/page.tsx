@@ -5,8 +5,11 @@ import { ChevronRight } from "lucide-react";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
-  title: "Vision & Philosophy | Stone Circuit",
-  description: "At Stone Circuit, we believe software should reduce operational complexity instead of increasing it. Explore our long-term philosophy.",
+  title: "Vision | Stone Circuit",
+  description: "Learn the long-term vision behind Stone Circuit and the future of intelligent business software.",
+  alternates: {
+    canonical: "https://stonecircuit.in/vision",
+  },
 };
 
 export default function VisionPage() {

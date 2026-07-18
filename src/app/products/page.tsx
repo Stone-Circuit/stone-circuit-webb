@@ -10,7 +10,10 @@ import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
   title: "Products | Stone Circuit",
-  description: "Explore Stone Circuit's suite of intelligent business software, designed to simplify complex operations.",
+  description: "Explore products developed by Stone Circuit including Operant OS.",
+  alternates: {
+    canonical: "https://stonecircuit.in/products",
+  },
 };
 
 interface Product {

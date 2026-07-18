@@ -15,35 +15,64 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://stonecircuit.in"),
   title: {
-    default: "Stone Circuit | Business Workflow Software",
+    default: "Stone Circuit | Building Intelligent Business Software",
     template: "%s | Stone Circuit",
   },
-  description: "Stone Circuit builds reliable software designed to bring order and predictability to complex business operations. Creators of Operant OS.",
+  description: "Stone Circuit builds intelligent software that helps businesses operate more efficiently. Creator of Operant OS, an AI-powered Business Operating System.",
+  applicationName: "Stone Circuit",
+  generator: "Next.js",
+  authors: [{ name: "Stone Circuit" }],
+  creator: "Stone Circuit",
+  publisher: "Stone Circuit",
+  category: "Technology",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   keywords: [
     "Stone Circuit",
     "Operant OS",
+    "AI Business Operating System",
     "Business Software",
-    "Workflow Automation",
-    "Process Orchestration"
+    "Artificial Intelligence",
+    "Accounting Software",
+    "Automation",
+    "Startup",
+    "Technology",
+    "India",
+    "Business Intelligence"
   ],
-  authors: [{ name: "Stone Circuit Team" }],
-  metadataBase: new URL("https://stonecircuit.in"),
-  alternates: {
-    canonical: "/",
+  icons: {
+    icon: "/icon",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon",
   },
   openGraph: {
-    title: "Stone Circuit | Business Workflow Software",
-    description: "Stone Circuit builds reliable software designed to bring order and predictability to complex business operations. Creators of Operant OS.",
+    type: "website",
     url: "https://stonecircuit.in",
     siteName: "Stone Circuit",
-    locale: "en_US",
-    type: "website",
+    title: "Stone Circuit | Building Intelligent Business Software",
+    description: "Stone Circuit builds intelligent software that helps businesses operate more efficiently.",
+    images: [
+      {
+        url: "/apple-icon",
+        width: 180,
+        height: 180,
+        alt: "Stone Circuit Logo",
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stone Circuit | Business Workflow Software",
-    description: "Stone Circuit builds reliable software designed to bring order and predictability to complex business operations.",
+    title: "Stone Circuit",
+    description: "Building intelligent business software.",
+    images: ["/apple-icon"],
   }
 };
 

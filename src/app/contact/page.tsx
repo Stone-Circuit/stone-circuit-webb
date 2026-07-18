@@ -5,8 +5,11 @@ import ContactForm from "@/components/contact/ContactForm";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
-  title: "Contact Us | Stone Circuit",
-  description: "Connect with our team for enterprise licensing, partnership opportunities, or support inquiries.",
+  title: "Contact | Stone Circuit",
+  description: "Get in touch with Stone Circuit.",
+  alternates: {
+    canonical: "https://stonecircuit.in/contact",
+  },
 };
 
 export default function ContactPage() {

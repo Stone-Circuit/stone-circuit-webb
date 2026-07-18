@@ -9,6 +9,9 @@ import { PageHeader } from "@/components/ui/PageHeader";
 export const metadata = {
   title: "Case Studies & Reports | Stone Circuit",
   description: "Read our technical case studies, safety frameworks, and workflow benchmarks for automated business software.",
+  alternates: {
+    canonical: "https://stonecircuit.in/research",
+  },
 };
 
 export default function ResearchPage() {

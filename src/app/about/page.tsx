@@ -5,7 +5,10 @@ import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
   title: "About | Stone Circuit",
-  description: "Learn about the mission, origins, and engineering philosophy of Stone Circuit.",
+  description: "Learn about Stone Circuit, our mission, and why we build intelligent software.",
+  alternates: {
+    canonical: "https://stonecircuit.in/about",
+  },
 };
 
 export default function AboutPage() {

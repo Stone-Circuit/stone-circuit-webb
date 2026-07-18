@@ -7,6 +7,9 @@ import Link from "next/link";
 export const metadata = {
   title: "Terms of Service | Stone Circuit",
   description: "Stone Circuit terms of service and software usage agreements.",
+  alternates: {
+    canonical: "https://stonecircuit.in/terms",
+  },
 };
 
 export default function TermsPage() {

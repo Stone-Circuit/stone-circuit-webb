@@ -7,6 +7,9 @@ import Link from "next/link";
 export const metadata = {
   title: "Privacy Policy | Stone Circuit",
   description: "Stone Circuit privacy policy and data protection guidelines.",
+  alternates: {
+    canonical: "https://stonecircuit.in/privacy",
+  },
 };
 
 export default function PrivacyPage() {

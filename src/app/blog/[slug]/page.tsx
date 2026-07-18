@@ -26,6 +26,9 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${post.title} | Stone Circuit Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://stonecircuit.in/blog/${slug}`,
+    },
   };
 }
 

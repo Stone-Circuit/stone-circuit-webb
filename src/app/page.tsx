@@ -12,8 +12,11 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Stone Circuit | Business Workflow Software",
-  description: "Stone Circuit builds reliable software designed to bring order and predictability to complex business operations. Creators of Operant OS.",
+  title: "Stone Circuit | Building Intelligent Business Software",
+  description: "Stone Circuit builds intelligent software that helps businesses operate more efficiently. Creator of Operant OS, an AI-powered Business Operating System.",
+  alternates: {
+    canonical: "https://stonecircuit.in",
+  },
 };
 
 export default function HomePage() {

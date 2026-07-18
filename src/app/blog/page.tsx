@@ -7,6 +7,9 @@ import { PageHeader } from "@/components/ui/PageHeader";
 export const metadata = {
   title: "Blog | Stone Circuit",
   description: "Deep-dives and announcements from the Stone Circuit systems engineering, design, and AI research teams.",
+  alternates: {
+    canonical: "https://stonecircuit.in/blog",
+  },
 };
 
 export default function BlogPage() {
