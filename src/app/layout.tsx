@@ -8,10 +8,7 @@ import Script from "next/script";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0d1515" },
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" }
-  ]
+  themeColor: "#00baa3",
 };
 
 export const metadata: Metadata = {
@@ -52,6 +49,11 @@ export const metadata: Metadata = {
     icon: "/icon",
     shortcut: "/favicon.ico",
     apple: "/apple-icon",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Stone Circuit",
+    statusBarStyle: "default",
   },
   openGraph: {
     type: "website",
