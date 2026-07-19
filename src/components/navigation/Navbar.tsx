@@ -49,7 +49,7 @@ export function Navbar() {
         <div className="flex items-center gap-10">
           <Link href="/" className="flex items-center gap-3">
   <Image
-    src="logo.png"
+    src="/logo.jpg"
     alt="Stone Circuit"
     width={40}
     height={40}
