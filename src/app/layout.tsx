@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/context/ThemeContext";
 import ShellLayout from "@/components/navigation/ShellLayout";
 import "@/styles/globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 
 export const viewport: Viewport = {
@@ -167,7 +166,6 @@ export default function RootLayout({
         <ThemeProvider>
           <ShellLayout>{children}</ShellLayout>
         </ThemeProvider>
-        <GoogleAnalytics gaId="G-5K8X8CJYD5" />
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"

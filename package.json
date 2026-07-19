@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.10",
     "@radix-ui/react-dialog": "^1.1.19",
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.2",

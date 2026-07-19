@@ -99,7 +99,7 @@ export default function ContactForm() {
             Message Sent Successfully
           </h3>
           <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-            Thank you for contacting Stone Circuit. We'll get back to you as soon as possible.
+            Thank you for contacting Stone Circuit. We&apos;ll get back to you as soon as possible.
           </p>
         </div>
 
