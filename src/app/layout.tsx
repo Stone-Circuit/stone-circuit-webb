@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     "Business Intelligence"
   ],
   icons: {
-    icon: "/icon",
+    icon: "/icon.png",
     shortcut: "/favicon.ico",
-    apple: "/apple-icon",
+    apple: "/apple-touch-icon.png",
   },
   appleWebApp: {
     capable: true,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: "Stone Circuit builds intelligent software that helps businesses operate more efficiently.",
     images: [
       {
-        url: "/apple-icon",
+        url: "/apple-touch-icon.png",
         width: 180,
         height: 180,
         alt: "Stone Circuit Logo",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Stone Circuit",
     description: "Building intelligent business software.",
-    images: ["/apple-icon"],
+    images: ["/apple-touch-icon.png"],
   }
 };
 
